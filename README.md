@@ -1,6 +1,20 @@
 # Card_Game_War
 Welcome to the common card game of war
 
+# Game Basics
+At the start of the game you take a full 52 card deck and deal out the cards until no remainder are left.
+
+Each player shuffles their deck with cards facing down.
+
+Players flip the card on top of their deck to verse the opponents.
+
+The player with the higher value card wins the cards played.
+
+If the cards drawn are equal values then WAR happens. Meaning 3 cards get drawn face down and a 4th is drawn and flipped to determine the winner. (If draw again, repeat until winner)
+
+At the end of the first round, both players shuffle the cards won and repeat until a winner.
+
+A winner is declared when a player has all 52 cards.
 
 # Wireframes
 ![](https://github.com/Jmajane/Card_Game_War/blob/main/Screen%20Shot%202022-04-06%20at%2011.00.09%20AM.png?raw=true)

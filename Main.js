@@ -23,3 +23,13 @@ function shuffle(array) {
 shuffle(cards)
 console.log(cards)
 // shuffle function works
+
+for (let i = 0; i < cards.length; i = i + 2) {
+    player.push(i)
+}
+console.log(player)
+
+for (let j = 1; j < cards.length; j = j + 2) {
+    computer.push(j)       
+}
+console.log(computer)
