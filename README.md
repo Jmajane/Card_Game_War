@@ -16,6 +16,12 @@ At the end of the first round, both players shuffle the cards won and repeat unt
 
 A winner is declared when a player has all 52 cards.
 
+# Basic User Stories
+Here a user explains the rules, setup, how to play and includes a video.
+
+![](https://playingcarddecks.com/blogs/how-to-play/war-game-rules)
+
+
 # Wireframes
 ![](https://github.com/Jmajane/Card_Game_War/blob/main/Screen%20Shot%202022-04-06%20at%2011.00.09%20AM.png?raw=true)
 
