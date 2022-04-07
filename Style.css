@@ -51,6 +51,8 @@ table {
 h1 {
     display: flex;
     justify-content: center;
+    font-size: 30px;
+    margin-top: 30px;
 }
 
 
@@ -62,13 +64,35 @@ h4 {
 .rules {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 110px;
     align-items: center;
     text-align: center;
+    margin-top: 10vh;;
     margin-left: 20px;
+    border: 2px solid black;
     
 }
+
+h5 {
+    display: flex;
+    font-size: 20px;
+}
+
+.card-counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+h6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
 .board {
     display: flex;
     gap: 30px;
@@ -76,9 +100,14 @@ h4 {
 }
 
 .game-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     border: 2px solid black;
     width: 80vh;
     height: 70vh;
+    margin-top: 10vh;
 }
 
 
@@ -97,5 +126,6 @@ li {
 
 .buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+
 }

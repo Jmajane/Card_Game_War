@@ -13,6 +13,8 @@ let playAgainButton = document.querySelector(".play-again")
 
 let activeGame = true;
 
+
+
 const jack = 11;
 const queen = 12;
 const king = 13;
