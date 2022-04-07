@@ -36,6 +36,14 @@ Here a user explains the rules, setup, how to play and includes a video.
 - create the start button and its properties(html) 
 
 - create a function to shuffle the array
+
+- create a new array
+- make a for loop that iterates over the length of the unshuffled array
+- Get a random number up to the length of the array and round down
+- Splice that random number out of your old array
+- Push the spliced element to your new array
+- Outside the loop, have the function return your new array
+
 - create 2 push methods to give 1 card to a player and computer
 
 - console.log both arrays to see the values were pushed

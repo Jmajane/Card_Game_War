@@ -5,23 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="Main.js" defer></script>
-    <link rel="stylesheet" href="Style.cs">
+    <link rel="stylesheet" href="Style.css">
     <title>Card Game War</title>
 </head>
 <body>
     <h1>Weclome to War!!! The card game.</h1>
-
+<div>
+    <h3 class="winner"></h3>
+</div>
+<div class="board">
+    <h5 class="computer-one"></h5>
+    <h5 class="player-one"></h5>
+</div>
 <div>
     <h4>Rules</h4>
-        <ul>
-            <li>1. Highest value card wins the duel, winning player takes all the cards</li>
-            <li>2. If a draw occurs, draw 3 cards and flip 4th card, winner takes all cards</li>
-            <li>3. Winner when one player has all 52 cards</li>
-        </ul>
+    <ul>
+        <li>1. Highest value card wins the duel, winning player takes all the cards</li>
+        <li>2. If a draw occurs, draw 3 cards and flip 4th card, winner takes all cards</li>
+        <li>3. Winner when one player has all 52 cards</li>
+    </ul>
 </div> 
+
+        
+
 <div>
     <button class="start">Start</button>
-    <button class="deal">Deal</button>
+    <button class="deal">Draw</button>
     <button class="play-again">Play Again</button>
 </div>
 </body>
