@@ -1,0 +1,40 @@
+
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+
+h4 {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 70px;
+}
+
+.board {
+    border: 2px solid black;
+    height: 70vh;
+    width: 80vh;
+    display: flex;
+    justify-content: ;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: flex;
+    max-height: 170px;
+    max-width: 100px;
+    border: 2px dashed black;
+    
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
