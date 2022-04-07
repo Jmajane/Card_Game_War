@@ -4,16 +4,16 @@ let playersCard = [];
 let computersCard = [];
 let playerOne = document.querySelector(".player-one")
 let computerOne = document.querySelector(".computer-one")
+let countCompCards = document.querySelector(".computer-cards")
+let countPlayerCards = document.querySelector(".player-cards")
 // player & computer will be empty arrays that get random cards pushed into them in a later function
 
 let display = document.querySelector(".winner")
 let startButton = document.querySelector(".start")
-let dealButton = document.querySelector(".deal")
+let drawButton = document.querySelector(".deal")
 let playAgainButton = document.querySelector(".play-again")
 
 let activeGame = true;
-
-
 
 const jack = 11;
 const queen = 12;
@@ -57,8 +57,14 @@ for (let i = 0; i <= cards.length; i++) {
 }
 console.log(computer)
 
-dealButton.addEventListener('click', () => {
+drawButton.addEventListener('click', () => {
     challenge()
+    for (let i = 0; i <= computer.length; i++) {
+        countCompCards.innerHTML = `Computer has ${[i]} cards`
+    }
+        for (let j = 0; j <= player.length; j++) {   
+            countPlayerCards.innerHTML = `Player has ${[j]} cards`
+        }
 //     // action button to draw a card
 })
 
@@ -107,7 +113,6 @@ function winner() {
 
 
 
+// console.log(countPlayerCards)
 
 
-
-// console.log(playersCard)
