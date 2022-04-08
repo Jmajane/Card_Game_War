@@ -49,7 +49,6 @@ function getDeck() {
 			deck.push(card);
 		}
 	}
-    
     return deck;
 }
 const deck = getDeck()
@@ -154,13 +153,13 @@ function winner() {
 function reset() {
     for (let i = 0; i <= player.length; i++) {
         let randomCard = player.splice(0, 52)
-        deck.push(randomCard)
+        deck.push(randomCard[0])
         deck = deck.flat()
     }
     // console.log(player)
     for (let i = 0; i <= computer.length; i++) {
         let randomCard = computer.splice(0, 52)
-        deck.push(randomCard)
+        deck.push(randomCard[0])
         deck = deck.flat()
     }
 }
