@@ -21,7 +21,7 @@ const king = 13;
 const ace = 14;
 // making the face cards have a const value of a number so they can be compared to other cards
 
-const cards = [ 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, king, ace]
+let cards = [ 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, king, ace]
 
 // console.log(cards)
 // face cards show in the array with the const values assigned to them
@@ -47,13 +47,13 @@ function shuffle(array) {
         player.push(randomCard)
         player = player.flat()
     }
-    console.log(player)
+    // console.log(player)
     for (let i = 0; i <= cards.length; i++) {
             let randomCard = cards.splice(0, 6)
             computer.push(randomCard)
             computer = computer.flat()
     }
-    console.log(computer)
+    // console.log(computer)
 }
 // console.log(cards)
 // shuffle function works
@@ -98,21 +98,21 @@ function challenge() {
         console.log(computer)
         display.innerHTML = "The Computer Wins"
         // } else if (playersCard = computersCard) {
-        } else {
-            return
-        }
+     } else {
         return
     }
+    return
+}
     
-    function winner() {
-        if (player.length === 0 ) {
+function winner() {
+    if (player.length === 0 ) {
             display.innerHTML = "The Computer Has Beat You"
-        } else if (computer.length === 0) {
+    } else if (computer.length === 0) {
             display.innerHTML = "You Beat the COMPUTER"
-        } else {
-            return
-        }
+    } else {
+        return
     }
+}
     
     
     // function battle() {
@@ -124,11 +124,20 @@ function challenge() {
             // }
       
 function reset() {
-    player = []
-    computer = []
+    for (let i = 0; i <= player.length; i++) {
+        let randomCard = player.splice(0, 52)
+        cards.push(randomCard)
+        cards = cards.flat()
+    }
+    // console.log(player)
+    for (let i = 0; i <= computer.length; i++) {
+            let randomCard = computer.splice(0, 52)
+            cards.push(randomCard)
+            cards = cards.flat()
+    }
 }
             
-            
+console.log(cards)          
             // console.log(countPlayerCards)
             
             
