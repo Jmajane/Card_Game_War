@@ -21,8 +21,8 @@ const queen = 12;
 const king = 13;
 const ace = 14;
 // making the face cards have a const value of a number so they can be compared to other cards
-
-let cards = [ 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, king, ace, 2, 3 , 4, 5, 6, 7, 8, 9]
+let suits = ["spades", "diamonds", "clubs", "hearts"];
+let cards = [ 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, king, ace,]
 
 // console.log(cards)
 // face cards show in the array with the const values assigned to them
@@ -32,7 +32,7 @@ startButton.addEventListener('click', () => {
 })
 
 function initializeGame() {
-    shuffle(cards)
+    shuffle(deck)
 }
 
 playAgainButton.addEventListener('click', () => {
@@ -41,16 +41,30 @@ playAgainButton.addEventListener('click', () => {
 })
 // button to start the game and deal cards
 
+function getDeck() {
+	let deck = new Array();
+    for(let i = 0; i < suits.length; i++) {
+		for(let j = 0; j < cards.length; j++)  {
+			let card = {Value: cards[j], Suit: suits[i]};
+			deck.push(card);
+		}
+	}
+    
+    return deck;
+}
+const deck = getDeck()
+
+
 function shuffle(array) {
     array.sort(() => Math.random() - 0.5); // javascript.info/task/shuffle for shuffle function
-    for (let i = 0; i <= cards.length; i++) {
-        let randomCard = cards.splice(11, 21)
+    for (let i = 0; i <= deck.length; i++) {
+        let randomCard = deck.splice(26, 26)
         player.push(randomCard)
         player = player.flat()
     }
     console.log(player)
-    for (let i = 0; i <= cards.length; i++) {
-            let randomCard = cards.splice(0, 10)
+    for (let i = 0; i <= deck.length; i++) {
+            let randomCard = deck.splice(0, 26)
             computer.push(randomCard)
             computer = computer.flat()
     }
@@ -90,16 +104,17 @@ function challenge() {
 }
 
 function drawCards() {
-    playersCard = player.shift(0)
-    playerOne.innerHTML = playersCard
-    computersCard = computer.shift(0)
-    computerOne.innerHTML = computersCard      
+    playersCard[0] = player.shift([0])
+    console.log(playersCard)
+    playerOne.innerHTML = playersCard[0].Value
+    computersCard[0] = computer.shift([0])
+    computerOne.innerHTML = computersCard[0].Value      
 }
 
 function compareCards() {
-    if (playersCard > computersCard) {
-        player.push(playersCard)
-        player.push(computersCard)
+    if (playersCard[0].Value > computersCard[0].Value) {
+        player.push(playersCard[0])
+        player.push(computersCard[0])
         if (activeWar) {
             player.push(cardStack)
             player = player.flat()
@@ -107,19 +122,19 @@ function compareCards() {
         }
         console.log(player)
         display.innerHTML = "The Player Won!"
-    } else if (playersCard < computersCard) {
-        computer.push(playersCard)
-        computer.push(computersCard)
+    } else if (playersCard[0].Value < computersCard[0].Value) {
+        computer.push(playersCard[0])
+        computer.push(computersCard[0])
         if (activeWar) {
-            computer.push(cardStack)
+            computer.push(cardStack[0])
             computer = computer.flat()
             activeWar = false;
         }
         console.log(computer)
         display.innerHTML = "The Computer Wins"
-        } else if (playersCard === computersCard) {
-            cardStack.push(playersCard)
-            cardStack.push(computersCard)
+        } else if (playersCard[0].Value === computersCard[0].Value) {
+            cardStack.push(playersCard[0])
+            cardStack.push(computersCard[0])
             war()
     } else {
         return
@@ -139,14 +154,14 @@ function winner() {
 function reset() {
     for (let i = 0; i <= player.length; i++) {
         let randomCard = player.splice(0, 52)
-        cards.push(randomCard)
-        cards = cards.flat()
+        deck.push(randomCard)
+        deck = deck.flat()
     }
     // console.log(player)
     for (let i = 0; i <= computer.length; i++) {
         let randomCard = computer.splice(0, 52)
-        cards.push(randomCard)
-        cards = cards.flat()
+        deck.push(randomCard)
+        deck = deck.flat()
     }
 }
             
