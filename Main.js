@@ -14,6 +14,7 @@ let drawButton = document.querySelector(".deal")
 let playAgainButton = document.querySelector(".play-again")
 
 let activeGame = true;
+let activeWar = false;
 
 const jack = 11;
 const queen = 12;
@@ -21,7 +22,7 @@ const king = 13;
 const ace = 14;
 // making the face cards have a const value of a number so they can be compared to other cards
 
-let cards = [ 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, king, ace]
+let cards = [ 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, king, ace, 2, 3 , 4, 5, 6, 7, 8, 9]
 
 // console.log(cards)
 // face cards show in the array with the const values assigned to them
@@ -43,17 +44,17 @@ playAgainButton.addEventListener('click', () => {
 function shuffle(array) {
     array.sort(() => Math.random() - 0.5); // javascript.info/task/shuffle for shuffle function
     for (let i = 0; i <= cards.length; i++) {
-        let randomCard = cards.splice(6, 7)
+        let randomCard = cards.splice(11, 21)
         player.push(randomCard)
         player = player.flat()
     }
-    // console.log(player)
+    console.log(player)
     for (let i = 0; i <= cards.length; i++) {
-            let randomCard = cards.splice(0, 6)
+            let randomCard = cards.splice(0, 10)
             computer.push(randomCard)
             computer = computer.flat()
     }
-    // console.log(computer)
+    console.log(computer)
 }
 // console.log(cards)
 // shuffle function works
@@ -82,47 +83,59 @@ drawButton.addEventListener('click', () => {
 })
 
 function challenge() {
+    drawCards()
+    compareCards()
+    // we are grabbing the first card in both arrays and comparing to one another
+    return
+}
+
+function drawCards() {
     playersCard = player.shift(0)
     playerOne.innerHTML = playersCard
     computersCard = computer.shift(0)
-    computerOne.innerHTML = computersCard
-    // we are grabbing the first card in both arrays and comparing to one another
+    computerOne.innerHTML = computersCard      
+}
+
+function compareCards() {
     if (playersCard > computersCard) {
         player.push(playersCard)
         player.push(computersCard)
+        if (activeWar) {
+            player.push(cardStack)
+            player = player.flat()
+            activeWar = false
+        }
         console.log(player)
         display.innerHTML = "The Player Won!"
     } else if (playersCard < computersCard) {
         computer.push(playersCard)
         computer.push(computersCard)
+        if (activeWar) {
+            computer.push(cardStack)
+            computer = computer.flat()
+            activeWar = false;
+        }
         console.log(computer)
         display.innerHTML = "The Computer Wins"
-        // } else if (playersCard = computersCard) {
-     } else {
+        } else if (playersCard === computersCard) {
+            cardStack.push(playersCard)
+            cardStack.push(computersCard)
+            war()
+    } else {
         return
     }
-    return
 }
-    
+
 function winner() {
-    if (player.length === 0 ) {
+    if (player.length === 0 || player.length < 3) {
             display.innerHTML = "The Computer Has Beat You"
-    } else if (computer.length === 0) {
+    } else if (computer.length === 0 || computer.length < 3) {
             display.innerHTML = "You Beat the COMPUTER"
     } else {
         return
     }
 }
-    
-    
-    // function battle() {
-        //     playersCard = player.shift(0, 1, 2, 3)
-        //     computersCard = computer.shift(0, 1, 2, 3)
-        //     if (playersCard[4] > playersCard[4]) {
-            
-            //     }
-            // }
-      
+
 function reset() {
     for (let i = 0; i <= player.length; i++) {
         let randomCard = player.splice(0, 52)
@@ -131,14 +144,27 @@ function reset() {
     }
     // console.log(player)
     for (let i = 0; i <= computer.length; i++) {
-            let randomCard = computer.splice(0, 52)
-            cards.push(randomCard)
-            cards = cards.flat()
+        let randomCard = computer.splice(0, 52)
+        cards.push(randomCard)
+        cards = cards.flat()
     }
 }
             
-console.log(cards)          
-            // console.log(countPlayerCards)
-            
-            
-            
+
+let cardStack = []
+function war() {
+    activeWar = true;
+    if (player.length > 3 && computer.length > 3) {
+        cardStack.push(player.splice(0, 3))
+        cardStack.push(computer.splice(0, 3))
+        cardStack = cardStack.flat()
+        console.log(cardStack)
+    drawCards()
+    compareCards()
+    cardStack = []
+    } else {
+        winner()
+    }
+    return
+}
+
