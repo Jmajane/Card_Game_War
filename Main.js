@@ -38,6 +38,10 @@ function initializeGame() {
 playAgainButton.addEventListener('click', () => {
     reset()      
     initializeGame()
+    console.log(player)
+    console.log(computer)
+    playerOne.innerHTML = "Start"
+    computerOne.innerHTML = "Start"
 })
 // button to start the game and deal cards
 
@@ -51,8 +55,9 @@ function getDeck() {
 	}
     return deck;
 }
-const deck = getDeck()
 
+let deck = getDeck()
+// console.log(getDeck())
 
 function shuffle(array) {
     array.sort(() => Math.random() - 0.5); // javascript.info/task/shuffle for shuffle function
@@ -61,13 +66,13 @@ function shuffle(array) {
         player.push(randomCard)
         player = player.flat()
     }
-    console.log(player)
+    // console.log(player)
     for (let i = 0; i <= deck.length; i++) {
             let randomCard = deck.splice(0, 26)
             computer.push(randomCard)
             computer = computer.flat()
     }
-    console.log(computer)
+    // console.log(computer)
 }
 // console.log(cards)
 // shuffle function works
@@ -104,7 +109,7 @@ function challenge() {
 
 function drawCards() {
     playersCard[0] = player.shift([0])
-    console.log(playersCard)
+    // console.log(playersCard)
     playerOne.innerHTML = playersCard[0].Value
     computersCard[0] = computer.shift([0])
     computerOne.innerHTML = computersCard[0].Value      
@@ -119,17 +124,17 @@ function compareCards() {
             player = player.flat()
             activeWar = false
         }
-        console.log(player)
+        // console.log(player)
         display.innerHTML = "The Player Won!"
     } else if (playersCard[0].Value < computersCard[0].Value) {
         computer.push(playersCard[0])
         computer.push(computersCard[0])
         if (activeWar) {
-            computer.push(cardStack[0])
+            computer.push(cardStack)
             computer = computer.flat()
             activeWar = false;
         }
-        console.log(computer)
+        // console.log(computer)
         display.innerHTML = "The Computer Wins"
         } else if (playersCard[0].Value === computersCard[0].Value) {
             cardStack.push(playersCard[0])
@@ -151,17 +156,11 @@ function winner() {
 }
 
 function reset() {
-    for (let i = 0; i <= player.length; i++) {
-        let randomCard = player.splice(0, 52)
-        deck.push(randomCard[0])
-        deck = deck.flat()
-    }
-    // console.log(player)
-    for (let i = 0; i <= computer.length; i++) {
-        let randomCard = computer.splice(0, 52)
-        deck.push(randomCard[0])
-        deck = deck.flat()
-    }
+    player = []
+    computer = []
+    playersCard = []
+    computersCard = []
+    deck = getDeck()
 }
             
 
