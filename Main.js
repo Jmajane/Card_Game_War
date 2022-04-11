@@ -16,24 +16,23 @@ let playAgainButton = document.querySelector(".play-again")
 let activeGame = true;
 let activeWar = false;
 
-const jack = 11;
-const queen = 12;
-const king = 13;
-const ace = 14;
+const J = 11;
+const Q = 12;
+const K = 13;
+const A = 14;
 // making the face cards have a const value of a number so they can be compared to other cards
 let suits = ["spades", "diamonds", "clubs", "hearts"];
-let cards = [ 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, king, ace,]
+let cards = [ '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
 
 // console.log(cards)
 // face cards show in the array with the const values assigned to them
+
 startButton.addEventListener('click', () => {
     initializeGame()
     display.innerHTML = "Play by clicking draw"
 })
+// button to start the game and deal cards
 
-function initializeGame() {
-    shuffle(deck)
-}
 
 playAgainButton.addEventListener('click', () => {
     reset()      
@@ -43,44 +42,6 @@ playAgainButton.addEventListener('click', () => {
     playerOne.innerHTML = "Start"
     computerOne.innerHTML = "Start"
 })
-// button to start the game and deal cards
-
-function getDeck() {
-	let deck = new Array();
-    for(let i = 0; i < suits.length; i++) {
-		for(let j = 0; j < cards.length; j++)  {
-			let card = {Value: cards[j], Suit: suits[i]};
-			deck.push(card);
-		}
-	}
-    return deck;
-}
-
-let deck = getDeck()
-// console.log(getDeck())
-
-function shuffle(array) {
-    array.sort(() => Math.random() - 0.5); // javascript.info/task/shuffle for shuffle function
-    for (let i = 0; i <= deck.length; i++) {
-        let randomCard = deck.splice(26, 26)
-        player.push(randomCard)
-        player = player.flat()
-    }
-    // console.log(player)
-    for (let i = 0; i <= deck.length; i++) {
-            let randomCard = deck.splice(0, 26)
-            computer.push(randomCard)
-            computer = computer.flat()
-    }
-    // console.log(computer)
-}
-// console.log(cards)
-// shuffle function works
-
-
-// // the for loop is going through the array of cards
-// // splice opens the card array, we then pick a spot in the array and pick a desired amount after that
-// // we then push the cards into the player array and use flat to make one array
 
 
 drawButton.addEventListener('click', () => {
@@ -100,6 +61,51 @@ drawButton.addEventListener('click', () => {
     //     // action button to draw a card
 })
 
+
+function initializeGame() {
+    shuffle(deck)
+}
+
+
+function getDeck() {  // https://www.thatsoftwaredude.com/content/6196/coding-a-card-deck-in-javascript
+	let deck = new Array();
+    for(let i = 0; i < suits.length; i++) {
+		for(let j = 0; j < cards.length; j++)  {
+			let card = {Value: cards[j], Suit: suits[i]};
+			deck.push(card);
+       
+		}
+	}
+    // renderDeck(deck)
+    return deck;
+}
+let deck = getDeck()
+// console.log(getDeck())
+
+
+function shuffle(deck) {
+    deck.sort(() => Math.random() - 0.5); // javascript.info/task/shuffle for shuffle function
+    for (let i = 0; i <= deck.length; i++) {
+        let randomCard = deck.splice(26, 26)
+        player.push(randomCard)
+        player = player.flat()
+    }
+    // console.log(player)
+    for (let i = 0; i <= deck.length; i++) {
+            let randomCard = deck.splice(0, 26)
+            computer.push(randomCard)
+            computer = computer.flat()
+    }
+    // console.log(computer)
+}
+// console.log(cards)
+// shuffle function works
+
+// // the for loop is going through the array of cards
+// // splice opens the card array, we then pick a spot in the array and pick a desired amount after that
+// // we then push the cards into the player array and use flat to make one array
+
+
 function challenge() {
     drawCards()
     compareCards()
@@ -107,13 +113,29 @@ function challenge() {
     return
 }
 
+
 function drawCards() {
+    playerOne.classList.remove("clubs")
+    playerOne.classList.remove("diamonds")
+    playerOne.classList.remove("spades")
+    playerOne.classList.remove("hearts")
+    computerOne.classList.remove("clubs")
+    computerOne.classList.remove("diamonds")
+    computerOne.classList.remove("spades")
+    computerOne.classList.remove("hearts")
     playersCard[0] = player.shift([0])
     // console.log(playersCard)
     playerOne.innerHTML = playersCard[0].Value
+    playerOne.classList.add("suit")
+    playerOne.classList.add(playersCard[0].Suit)
+    // console.log(playerOne.classList)
     computersCard[0] = computer.shift([0])
     computerOne.innerHTML = computersCard[0].Value      
+    computerOne.classList.add("suit")
+    computerOne.classList.add(computersCard[0].Suit)
 }
+
+
 
 function compareCards() {
     if (playersCard[0].Value > computersCard[0].Value) {
@@ -145,6 +167,8 @@ function compareCards() {
     }
 }
 
+
+
 function winner() {
     if (player.length === 0 || player.length < 3) {
             display.innerHTML = "The Computer Has Beat You"
@@ -155,6 +179,7 @@ function winner() {
     }
 }
 
+
 function reset() {
     player = []
     computer = []
@@ -162,7 +187,8 @@ function reset() {
     computersCard = []
     deck = getDeck()
 }
-            
+
+
 
 let cardStack = []
 function war() {
@@ -180,4 +206,10 @@ function war() {
     }
     return
 }
+
+
+
+
+            
+
 

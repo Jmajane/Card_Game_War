@@ -48,6 +48,13 @@ table {
 }
 
 
+
+body {
+    padding: 0px;
+    min-height: 100vh;
+    margin: 0px;
+}
+
 h1 {
     display: flex;
     justify-content: center;
@@ -81,10 +88,6 @@ h4 {
     
 }
 
-h5 {
-    display: flex;
-    font-size: 20px;
-}
 
 .card-counter {
     display: flex;
@@ -97,13 +100,22 @@ h6 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 
+
 .board {
+    background-image: url('https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dGFibGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+    height: 120vh;
     display: flex;
     gap: 30px;
-    /* justify-content: ; */
+    justify-content: space-between;
+}
+
+h5 {
+    display: flex;
+    font-size: 26px;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .game-board {
@@ -128,11 +140,55 @@ li {
     max-height: 170px;
     max-width: 100px;
     border: 2px dashed black;
-    
 }
 
 .buttons {
     display: flex;
-    justify-content: space-evenly;
-
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 50px;
+    width: 200px;
 }
+
+
+
+.card { /*https://www.thatsoftwaredude.com/content/6196/coding-a-card-deck-in-javascript */
+    border: solid 8px #aaa;
+    border-radius: 9px;
+    width: 95px;
+    height: 150px;
+    background-color: white;
+    padding: 3px 3px 3px 3px;
+    margin: 5px;
+}
+
+
+.spades {
+    background-image: url('https://i.pinimg.com/474x/d6/61/02/d661021044b927f08b5704f899297b7a.jpg');
+	background-size: 135px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.diamonds {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2fS7Z0lr-He6fOjyrqSnBxBCe4J2vDsYfjw&usqp=CAU');
+    background-size: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hearts {
+    background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Card_heart.svg/1200px-Card_heart.svg.png');
+    background-size: 110px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.clubs {
+    background-image: url('data:image/png;base64,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');
+    background-size: 110px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
