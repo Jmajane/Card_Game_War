@@ -50,17 +50,18 @@ table {
 
 
 body {
+    background-image: url('https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dGFibGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    position: relative;
     background-color: black;
-    padding: 0px;
-    min-height: 100vh;
-    margin: 0px;
+    height: 100vh;
 }
 
-.title {
+.row {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 
 .winner {
@@ -68,43 +69,41 @@ body {
     font-weight: bold;
     color:rgb(9, 9, 16);
     font-size: 20px;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 h1 {
-    display: flex;
-    justify-content: center;
     color: red;
     font-size: 30px;
     margin-top: 10px;
     padding: 5px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 0;
+    left: 50%;
 }
 
 h3 {
-    display: flex;
-    justify-content: center;
+
     margin: 5vh;
     margin-bottom: -5vh;
 
 }
 
-h4 {
-    display: flex;
-    align-items: flex-start;
-}
-
 .rules {
+    background-image: url('https://previews.123rf.com/images/victor69/victor691502/victor69150200004/36206857-rid%C3%A9-nappe-tartan-rouge-dans-le-papier-peint-cage-de-texture-perspectives-uniques-vue-de-dessus-.jpg');
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 110px;
     align-items: center;
     text-align: center;
-    margin-top: 5em;
-    margin-bottom: 20em;
-    margin-left: 20px;
-    border: 2px solid black;
-    
+    border: 6px solid rgb(89, 88, 88);
+    box-shadow: 5px 5px 10px;
+    opacity: .8;
+    border-radius: 9px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 
@@ -114,7 +113,6 @@ h4 {
     justify-content: space-evenly;
     color: rgb(207, 241, 12);
     font-weight: bold;
-    margin-bottom: 25%;
 }
 
 
@@ -126,11 +124,9 @@ h6 {
 
 
 .board {
-    background-image: url('https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dGFibGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
-    height: 120vh;
     display: flex;
-    gap: 30px;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 
 h5 {
@@ -150,7 +146,8 @@ h5 {
     box-shadow: 5px 5px 10px;
     width: 80vh;
     height: 70vh;
-    margin-top: 10vh;
+    margin: 0 1em;
+    border-radius: 9px;
 }
 
 
