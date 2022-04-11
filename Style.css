@@ -50,16 +50,34 @@ table {
 
 
 body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
     padding: 0px;
     min-height: 100vh;
     margin: 0px;
 }
 
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.winner {
+    display: flex;
+    font-weight: bold;
+    color:rgb(9, 9, 16);
+    font-size: 20px;
+    margin-bottom: 10%;
+}
+
 h1 {
     display: flex;
     justify-content: center;
+    color: red;
     font-size: 30px;
-    margin-top: 30px;
+    margin-top: 10px;
+    padding: 5px;
 }
 
 h3 {
@@ -82,7 +100,8 @@ h4 {
     width: 110px;
     align-items: center;
     text-align: center;
-    margin-top: 10vh;;
+    margin-top: 5em;
+    margin-bottom: 20em;
     margin-left: 20px;
     border: 2px solid black;
     
@@ -93,6 +112,9 @@ h4 {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    color: rgb(207, 241, 12);
+    font-weight: bold;
+    margin-bottom: 25%;
 }
 
 
@@ -119,11 +141,13 @@ h5 {
 }
 
 .game-board {
+    background-image: url('https://media.istockphoto.com/photos/textured-picture-id171320905?b=1&k=20&m=171320905&s=170667a&w=0&h=yfL51z-ByL2fAuFRO9G6tKcs3CofGDwqDhlYSlY5npA=');
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border: 2px solid black;
+    border: 6px solid rgb(177, 36, 36);
+    box-shadow: 5px 5px 10px;
     width: 80vh;
     height: 70vh;
     margin-top: 10vh;
@@ -142,16 +166,44 @@ li {
     border: 2px dashed black;
 }
 
-.buttons {
+.buttons-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
+    box-shadow: 5px 5px 10px;
     height: 50px;
-    width: 200px;
 }
 
+.start {
+    width: 100px;
+    height: 40px;
+    color: rgb(10, 10, 10);
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px;
+    opacity: .8;
+}
 
+.deal {
+    width: 100px;
+    height: 40px;
+    color: rgb(10, 10, 10);
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px;
+    opacity: .8;
+}
+
+.play-again {
+    width: 100px;
+    height: 40px;
+    color: rgb(10, 10, 10);
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px;
+    opacity: .8;
+}
 
 .card { /*https://www.thatsoftwaredude.com/content/6196/coding-a-card-deck-in-javascript */
     border: solid 8px #aaa;
@@ -160,6 +212,7 @@ li {
     height: 150px;
     background-color: white;
     padding: 3px 3px 3px 3px;
+    box-shadow: 5px 5px 10px;
     margin: 5px;
 }
 
