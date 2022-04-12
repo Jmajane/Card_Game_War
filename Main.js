@@ -133,8 +133,10 @@ function drawCards() {
     computerOne.classList.add(computersCard[0].Suit)
 }
 
+
 // when comparing cards, they get pushed to a seperate array, the winner then gets both cards
 // pushed into the end of their array
+
 function compareCards() {
     if (playersCard[0].Value > computersCard[0].Value) {
         player.push(playersCard[0])
