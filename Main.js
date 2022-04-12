@@ -31,7 +31,7 @@ startButton.addEventListener('click', () => {
     initializeGame()
     display.innerHTML = "Play by clicking draw"
 })
-// button to start the game and deal cards
+// button to start the game, create the deck, shuffle and deal cards
 
 
 playAgainButton.addEventListener('click', () => {
@@ -42,7 +42,8 @@ playAgainButton.addEventListener('click', () => {
     playerOne.innerHTML = "Start"
     computerOne.innerHTML = "Start"
 })
-
+// this but will reset the game board, delete the old deck and create a new one.
+// this then follows the order of the start button
 
 drawButton.addEventListener('click', () => {
     if (player.length > 0 && computer.length > 0) {
@@ -58,8 +59,8 @@ drawButton.addEventListener('click', () => {
     for (let j = 0; j <= player.length; j++) {   
         countPlayerCards.innerHTML = `Player has ${[j]} cards`
     }
-    //     // action button to draw a card
 })
+// action button to draw a card, goes to the function challenge(), to then drawCards() / compareCards()
 
 
 function initializeGame() {
@@ -76,12 +77,11 @@ function getDeck() {  // https://www.thatsoftwaredude.com/content/6196/coding-a-
        
 		}
 	}
-    // renderDeck(deck)
     return deck;
 }
 let deck = getDeck()
 // console.log(getDeck())
-
+// getDeck() creates a new array of 52 cards using the arrays of suits & cards
 
 function shuffle(deck) {
     deck.sort(() => Math.random() - 0.5); // javascript.info/task/shuffle for shuffle function
@@ -99,11 +99,9 @@ function shuffle(deck) {
     // console.log(computer)
 }
 // console.log(cards)
-// shuffle function works
-
-// // the for loop is going through the array of cards
-// // splice opens the card array, we then pick a spot in the array and pick a desired amount after that
-// // we then push the cards into the player array and use flat to make one array
+// the for loop is going through the array of cards
+// splice opens the card array, we then pick a spot in the array and pick a desired amount after that
+// we then push the cards into the player array and use flat to make one array
 
 
 function challenge() {
@@ -115,9 +113,9 @@ function challenge() {
 
 
 function drawCards() {
-    playerOne.classList.remove("clubs")
-    playerOne.classList.remove("diamonds")
-    playerOne.classList.remove("spades")
+    playerOne.classList.remove("clubs") // first we need to remove any previously added class, 
+    playerOne.classList.remove("diamonds") // this makes it possible for CSS to add the correct suit
+    playerOne.classList.remove("spades")  // to the card being played
     playerOne.classList.remove("hearts")
     computerOne.classList.remove("clubs")
     computerOne.classList.remove("diamonds")
@@ -134,6 +132,10 @@ function drawCards() {
     computerOne.classList.add("suit")
     computerOne.classList.add(computersCard[0].Suit)
 }
+
+
+// when comparing cards, they get pushed to a seperate array, the winner then gets both cards
+// pushed into the end of their array
 
 function compareCards() {
     if (playersCard[0].Value > computersCard[0].Value) {
@@ -166,18 +168,20 @@ function compareCards() {
 }
 
 
-
+// if a player has 0 cards they lose
+// if a player has <= 3 going into a war they will lose due to not having enough cards to play the war
 function winner() {
-    if (player.length === 0 || player.length < 3) {
+    if (player.length === 0 || player.length <= 3) {
             display.innerHTML = "The Computer Has Beat You"
-    } else if (computer.length === 0 || computer.length < 3) {
+    } else if (computer.length === 0 || computer.length <= 3) {
             display.innerHTML = "You Beat the COMPUTER"
     } else {
         return
     }
 }
 
-
+// reset will empty all arrays
+// reset will then create a new deck to be dealt to the players
 function reset() {
     player = []
     computer = []
@@ -187,7 +191,8 @@ function reset() {
 }
 
 
-
+// war takes 3 cards from both players putting them into the cardStack array
+// the winner gets all cards pushed to their decks
 let cardStack = []
 function war() {
     activeWar = true;

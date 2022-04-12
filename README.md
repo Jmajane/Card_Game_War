@@ -59,3 +59,7 @@ in the array to be played
 - have the cards pushed into the winners array
 
 - play again button(resets the game)
+
+# Potential Bugs
+- War with less then 3 cards may add more cards to the deck
+- War with less then 3 cards should end the game
