@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@300&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Moonrocks&display=swap');
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -59,23 +62,12 @@ body {
     height: 100vh;
 }
 
-.row {
-    display: flex;
-    justify-content: center;
-}
-
-.winner {
-    display: flex;
-    font-weight: bold;
-    color:rgb(9, 9, 16);
-    font-size: 20px;
-    margin-bottom: 5%;
-}
-
 h1 {
     color: red;
-    font-size: 30px;
-    margin-top: 10px;
+    font-family: Rubik Moonrocks;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 30px;
     padding: 5px;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -83,11 +75,15 @@ h1 {
     left: 50%;
 }
 
-h3 {
+.board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    margin: 5vh;
-    margin-bottom: -5vh;
-
+.row {
+    display: flex;
+    justify-content: center;
 }
 
 .rules {
@@ -102,38 +98,14 @@ h3 {
     box-shadow: 5px 5px 10px;
     opacity: .8;
     border-radius: 9px;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
 }
 
-
-.card-counter {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    color: rgb(207, 241, 12);
+p {
+    color:rgb(12, 7, 70);
+    font-family: Oswald;
     font-weight: bold;
-}
-
-
-h6 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
-.board {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-h5 {
-    display: flex;
-    font-size: 26px;
-    justify-content: space-between;
-    flex-direction: column;
 }
 
 .game-board {
@@ -150,17 +122,26 @@ h5 {
     border-radius: 9px;
 }
 
-
-
-ul {
-    list-style-type: none;
+.winner {
+    display: flex;
+    font-weight: bold;
+    font-family: Bebas Neue;
+    color:rgb(56, 58, 100);
+    font-size: 24px;
+    margin-bottom: 5%;
 }
 
-li {
+h3 {
+
+    margin: 5vh;
+    margin-bottom: -5vh;
+}
+
+h5 {
     display: flex;
-    max-height: 170px;
-    max-width: 100px;
-    border: 2px dashed black;
+    font-size: 26px;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .buttons-container {
@@ -172,6 +153,15 @@ li {
     height: 50px;
 }
 
+.card-counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: rgb(207, 241, 12);
+    font-family: Anek Bangla;
+    font-weight: bold;
+}
+
 .start {
     width: 100px;
     height: 40px;
@@ -180,6 +170,7 @@ li {
     font-weight: bold;
     box-shadow: 5px 5px 10px;
     opacity: .8;
+    border-radius: 9px;
 }
 
 .deal {
@@ -190,6 +181,7 @@ li {
     font-weight: bold;
     box-shadow: 5px 5px 10px;
     opacity: .8;
+    border-radius: 9px;
 }
 
 .play-again {
@@ -200,6 +192,13 @@ li {
     font-weight: bold;
     box-shadow: 5px 5px 10px;
     opacity: .8;
+    border-radius: 9px;
+}
+
+h6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card { /*https://www.thatsoftwaredude.com/content/6196/coding-a-card-deck-in-javascript */
@@ -212,7 +211,6 @@ li {
     box-shadow: 5px 5px 10px;
     margin: 5px;
 }
-
 
 .spades {
     background-image: url('https://i.pinimg.com/474x/d6/61/02/d661021044b927f08b5704f899297b7a.jpg');
