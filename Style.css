@@ -81,6 +81,7 @@ h1 {
     align-items: center;
 }
 
+
 .row {
     display: flex;
     justify-content: center;
@@ -239,4 +240,3 @@ h6 {
     background-repeat: no-repeat;
     background-position: center;
 }
-
