@@ -28,7 +28,6 @@ Here a user explains the rules, setup, how to play and includes a video.
 # ScreenShots
 
 
-
 # Pseudocode
 - create a variable for player = []
 - create a variable for computer =[]
