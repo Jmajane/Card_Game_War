@@ -26,13 +26,34 @@ Here a user explains the rules, setup, how to play and includes a video.
 ![](https://github.com/Jmajane/Card_Game_War/blob/main/Screen%20Shot%202022-04-06%20at%2011.00.09%20AM.png?raw=true)
 
 # ScreenShots
-
+- initial game screen
 ![Screen Shot 2022-04-13 at 9 06 11 AM](https://user-images.githubusercontent.com/100162086/163188079-66a5c6dc-4f98-4864-a306-9454a496af6a.png)
 
+- what is happening behind the sceans when war happens
 ![Screen Shot 2022-04-13 at 9 06 50 AM](https://user-images.githubusercontent.com/100162086/163188113-9112eb5b-ceb7-4fbf-9e1e-328bc8e87132.png)
 
+- how I created the deck and shuffled the cards
 ![Screen Shot 2022-04-13 at 9 07 23 AM](https://user-images.githubusercontent.com/100162086/163188133-be834efc-2193-4caa-8283-3b2cc373998c.png)
 
+# Technologies Used
+- HTML
+- CSS
+- Javascript
+- BootStrap
+- Flexbox
+
+# Getting Started
+![](https://jmajane.github.io/Card_Game_War/)
+
+# Next Steps
+- getting all cards to be displayed during war that are won
+- creating a shuffle button so the player can shuffle all hands
+- increasing to 4 players (1 player, 3 computers)
+
+# Helpful Links In Creating My Code
+![](https://www.thatsoftwaredude.com/content/6196/coding-a-card-deck-in-javascript)
+![](javascript.info/task/shuffle)
+![](https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dGFibGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&w=1000&q=80)
 
 # Pseudocode
 - create a variable for player = []
