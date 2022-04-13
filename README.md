@@ -43,7 +43,7 @@ Here a user explains the rules, setup, how to play and includes a video.
 - Flexbox
 
 # Getting Started
-![](https://jmajane.github.io/Card_Game_War/)
+https://jmajane.github.io/Card_Game_War/
 
 # Next Steps
 - getting all cards to be displayed during war that are won
@@ -51,9 +51,9 @@ Here a user explains the rules, setup, how to play and includes a video.
 - increasing to 4 players (1 player, 3 computers)
 
 # Helpful Links In Creating My Code
-![](https://www.thatsoftwaredude.com/content/6196/coding-a-card-deck-in-javascript)
-![](javascript.info/task/shuffle)
-![](https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dGFibGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&w=1000&q=80)
+- https://www.thatsoftwaredude.com/content/6196/coding-a-card-deck-in-javascript
+- javascript.info/task/shuffle
+- https://www.thatsoftwaredude.com/content/6196/coding-a-card-deck-in-javascript
 
 # Pseudocode
 - create a variable for player = []
