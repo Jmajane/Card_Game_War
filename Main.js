@@ -37,8 +37,8 @@ startButton.addEventListener('click', () => {
 playAgainButton.addEventListener('click', () => {
     reset()      
     initializeGame()
-    console.log(player)
-    console.log(computer)
+    // console.log(player)
+    // console.log(computer)
     playerOne.innerHTML = "Start"
     computerOne.innerHTML = "Start"
 })
@@ -200,7 +200,7 @@ function war() {
         cardStack.push(player.splice(0, 3))
         cardStack.push(computer.splice(0, 3))
         cardStack = cardStack.flat()
-        console.log(cardStack)
+        // console.log(cardStack)
     drawCards()
     compareCards()
     cardStack = []
