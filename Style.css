@@ -51,7 +51,6 @@ table {
 }
 
 
-
 body {
     background-image: url('https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dGFibGUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
     display: flex;
@@ -141,7 +140,7 @@ p {
     font-weight: bold;
     font-family: Bebas Neue;
     color:rgb(56, 58, 100);
-    font-size: 28px;
+    font-size: 27px;
     margin-bottom: 5%;
 }
 
