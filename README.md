@@ -27,6 +27,11 @@ Here a user explains the rules, setup, how to play and includes a video.
 
 # ScreenShots
 
+![Screen Shot 2022-04-13 at 9 06 11 AM](https://user-images.githubusercontent.com/100162086/163188079-66a5c6dc-4f98-4864-a306-9454a496af6a.png)
+
+![Screen Shot 2022-04-13 at 9 06 50 AM](https://user-images.githubusercontent.com/100162086/163188113-9112eb5b-ceb7-4fbf-9e1e-328bc8e87132.png)
+
+![Screen Shot 2022-04-13 at 9 07 23 AM](https://user-images.githubusercontent.com/100162086/163188133-be834efc-2193-4caa-8283-3b2cc373998c.png)
 
 
 # Pseudocode
