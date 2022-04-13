@@ -52,7 +52,7 @@ https://jmajane.github.io/Card_Game_War/
 
 # Helpful Links In Creating My Code
 - https://www.thatsoftwaredude.com/content/6196/coding-a-card-deck-in-javascript
-- javascript.info/task/shuffle
+- https://www.javascript.info/task/shuffle
 - https://www.thatsoftwaredude.com/content/6196/coding-a-card-deck-in-javascript
 
 # Pseudocode
