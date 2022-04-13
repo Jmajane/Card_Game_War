@@ -25,6 +25,10 @@ Here a user explains the rules, setup, how to play and includes a video.
 # Wireframes
 ![](https://github.com/Jmajane/Card_Game_War/blob/main/Screen%20Shot%202022-04-06%20at%2011.00.09%20AM.png?raw=true)
 
+# ScreenShots
+
+
+
 # Pseudocode
 - create a variable for player = []
 - create a variable for computer =[]
